@@ -1,0 +1,20 @@
+{
+  "name": "argon-param-to-model",
+  "version": "1.0.0",
+  "description": "This polymer element extracts the parameters from url and copies these values to the local model.",
+  "keywords": ["web-components", "polymer", "parsing", "url", "parameter"],
+  "author": {
+    "name": "Marc Kronberg",
+    "email": "krocon@gmail.com",
+    "url": "www.krocon.de"
+  },
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krocon/argon-param-to-model.git"
+  }
+}

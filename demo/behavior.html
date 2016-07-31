@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>argon-param-to-model Behavior demo</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+  <link rel="import" href="../argon-param-to-model-behavior.html">
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0
+    }
+  </style>
+</head>
+<body unresolved>
+
+<h1>ArgonParamToModelBehavior Demo</h1>
+
+<dom-module id="argon-param-to-model-demo1">
+
+  <template>
+    <h2>Demo</h2>
+
+    <div>
+      <p>Name: [[name]]</p>
+      <p>ID: [[id]]</p>
+      <p>Next: [[_next(id)]]</p>
+    </div>
+  </template>
+
+  <script>
+    HTMLImports.whenReady(function () {
+      Polymer({
+        is: 'argon-param-to-model-demo1',
+        behaviors: [
+          ArgonParamToModelBehavior
+        ],
+        properties: {
+          name: {
+            type: 'String'
+          },
+          id: {
+            type: 'Number'
+          }
+        },
+        _next: function (i) {
+          return i + 1;
+        },
+        ready: function () {
+          console.info('ready.');
+        },
+        attached: function () {
+          console.info('attached.');
+          this.queryToModel(null, this);
+        }
+      });
+    });
+  </script>
+</dom-module>
+
+<argon-param-to-model-demo1></argon-param-to-model-demo1>
+
+</body>
+</html>

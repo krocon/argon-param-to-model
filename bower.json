@@ -1,0 +1,30 @@
+{
+  "name": "argon-param-to-model",
+  "description": "This polymer element extracts the parameters from url and copies these values to the local model.",
+  "authors": [
+    "Marc Kronberg"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "parsing url parameters"
+  ],
+  "version": "1.0.0",
+  "main": "argon-param-to-model.html",
+  "license": "http://robdodson.mit-license.org/",
+  "ignore": [
+    "/.*",
+    "/test/"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+    "iron-location": "PolymerElements/iron-location#^0.8.4",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "iron-pages": "PolymerElements/iron-pages#^1.0.7"
+  }
+}

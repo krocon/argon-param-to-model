@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <title>argon-param-to-model tag demo</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../iron-location/iron-location.html">
+  <link rel="import" href="../argon-param-to-model.html">
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: 0
+    }
+  </style>
+</head>
+<body unresolved>
+
+<h1>&lt;argon-param-to-model&gt;</h1>
+
+<dom-module id="argon-param-to-model-demo2">
+
+  <template>
+    <iron-location path="{{path}}" query="{{query}}"></iron-location>
+    <argon-param-to-model paramstring="[[query]]"></argon-param-to-model>
+
+    <div>
+      <p>Name: [[name]]</p>
+      <p>ID: [[id]]</p>
+      <p>Next: [[_next(id)]]</p>
+      <p>Magic: [[magic]]</p>
+    </div>
+  </template>
+
+  <script>
+    HTMLImports.whenReady(function () {
+      Polymer({
+        is: 'argon-param-to-model-demo2',
+        properties: {
+          name: {
+            type: 'String'
+          },
+          id: {
+            type: 'Number'
+          },
+          magic: {
+            type: 'Number'
+          }
+        },
+        _next: function (i) {
+          return i + 1;
+        }
+      });
+    });
+  </script>
+</dom-module>
+
+<argon-param-to-model-demo2></argon-param-to-model-demo2>
+
+</body>
+</html>
