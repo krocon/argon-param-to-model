@@ -9,9 +9,9 @@
     "polymer",
     "parsing url parameters"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "argon-param-to-model.html",
-  "license": "http://robdodson.mit-license.org/",
+  "license": "MIT License",
   "ignore": [
     "/.*",
     "/test/"
